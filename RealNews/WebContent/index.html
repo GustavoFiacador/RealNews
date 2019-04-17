@@ -1,25 +1,33 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="index.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>RealNews</title>
 
-<!------ Include the above in your HEAD tag ---------->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    
+</head>
+<body>
 
-<!--Container-->
+
 <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">RealNews</a>
+        <a class="navbar-brand" href="index.html"><h1>RealNews</h1></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="nav navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="login.html">Login</a>
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal"  >Login</a>
                 </li>	
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Cadastre-se</a>
+                    <a class="nav-link" href="#" >Cadastre-se</a>
                 </li>
             </ul>
         </div>
@@ -29,7 +37,6 @@
 <div class="container">
     <div class="row mb-2">
         <div class="col-12 text-center pt-3">
-            <h1>Bootstrap 4 News Magazine Carousel</h1>
         </div>
     </div>
     <div class="row">
@@ -327,9 +334,70 @@
             <!--END SECTION-->
         </div>
     </div>
-    <div class="row mb-4">
-        <div class="col-12 text-center">
-            <p>Design by Ari Budin <a target="_blank" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">Bootstrap.News</a> | images by pixabay and pexels</p>
-        </div>
-    </div>
-</div>
+    <div class="modal fade" id="loginModal">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                 <div class="modal-content">
+                     <div class="modal-header">
+                        <h1 class="logo mb-3">Login</h1>
+                         <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                     </div>
+                     <div class="modal-body">
+                            <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-5 mx-auto">
+                                            <div id="first">
+                                                <div class="myform form ">
+                                                    <form action="Login.do" method="post" name="login">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Email</label> <input
+                                                                type="email" name="email" class="form-control" id="email"
+                                                                aria-describedby="emailHelp" placeholder="Enter email" style="width:300px >
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Senha</label> <input
+                                                                type="password" name="password" id="password"
+                                                                class="form-control" aria-describedby="emailHelp"
+                                                                placeholder="Enter Password">
+                                                        </div>
+                                                        <div class="col-md-12 text-center ">
+                                                            <button type="submit"
+                                                                class=" btn btn-block mybtn btn-primary tx-tfm">Login</button>
+                                                        </div>
+                                                        <div class="col-md-12 ">
+                                                                <div class="login-or">
+                                                                    <hr class="hr-or">
+                                                                    <span class="span-or">or</span>
+                                                                </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <p class="text-center">
+                                                                Você não tem uma conta? <br>
+                                                                <a href="#" id="signup">Cadastre-se agora</a>
+                                                            </p>
+                                                        </div>
+                                                    </form>
+                            
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
