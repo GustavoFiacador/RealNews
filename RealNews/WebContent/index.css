@@ -66,6 +66,8 @@ h1, h2, h3 {
 	height: 1px;
 	margin-top: 0px !important;
 	margin-bottom: 0px !important;
+	margin-left:1px;
+	width:400px;
 }
 
 
